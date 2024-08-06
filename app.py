@@ -15,7 +15,7 @@ def index():
 
 @app.route("/predict", methods=["POST", "GET"])
 def predict():
-    setup_df = pd.DataFrame(pd.Series([int(x) for x in request.form.values()]))
+    setup_df = pd.DataFrame(pd.Series([int(request.form[str(i)]) for i in range(1, 9)]))
     diabetic_prediction = model.predict_proba(setup_df)
     output = '{:.2%}'.format(diabetic_prediction[0][1])
     output = str(float(output)*100) + "%"
