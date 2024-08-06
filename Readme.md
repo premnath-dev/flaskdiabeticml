@@ -26,3 +26,7 @@ This Flask application demonstrates the integration of a machine learning model 
 ## Usage
 
 1. Start the Flask application:
+
+
+## REMOTE
+Backend Deployed in [Backend Deployed](https://flaskdiabeticml.onrender.com)
